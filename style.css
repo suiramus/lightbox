@@ -1,0 +1,71 @@
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 20px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+
+
+.wrap {
+	max-width: 800px;
+	margin: 30px auto;
+}
+
+.gallery-one {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+	border-top: 1px solid transparent;
+	padding: 0 10px;
+}
+
+.img-box {
+	max-width: 25%;
+	display: block;
+	padding: 10px;
+}
+
+a.thumb {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+a.thumb:before {
+	display: block;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #333;
+	opacity: 0;
+	transition: all .3s;
+}
+
+a.thumb:hover:before {
+	opacity: .5;
+}
+
+
+@media screen and (max-width: 800px) {
+
+	.img-box {
+		max-width: 50%;
+	}
+
+} /* 800px media end */
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hover Image</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" media="screen" href="glightbox.css">
+<style>
+	*, *:before, *:after {
+		box-sizing: border-box;
+	}
+
+	body {
+		margin: 0;
+		padding: 20px;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.wrapper {
+		max-width: 800px;
+		margin: 40px auto;
+	}
+
+	.gallery {
+		display: flex;
+		margin: 0 -20px;
+		flex-wrap: wrap;
+	}
+
+	.gal-item {
+		max-width: 50%;
+		padding: 20px;
+	}
+
+	.gal-item a {
+		display: block;
+		width: 100%;
+		height: auto;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.gal-item a:before {
+		display: block;
+		position: absolute;
+		content: "";
+		/*background: #F99D27;*/
+		background: rgba(249, 157, 39, .5);
+		/*background: rgba(0, 173, 242, .5);*/
+		background-image: url('plus.png');
+		background-image: url('plus2.png');
+		/*background-image: url('plus3.png');*/
+		/*background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTMgMTBoLTN2M2gtMnYtM2gtM3YtMmgzdi0zaDJ2M2gzdjJ6bTguMTcyIDE0bC03LjM4Ny03LjM4N2MtMS4zODguODc0LTMuMDI0IDEuMzg3LTQuNzg1IDEuMzg3LTQuOTcxIDAtOS00LjAyOS05LTlzNC4wMjktOSA5LTkgOSA0LjAyOSA5IDljMCAxLjc2MS0uNTE0IDMuMzk4LTEuMzg3IDQuNzg1bDcuMzg3IDcuMzg3LTIuODI4IDIuODI4em0tMTIuMTcyLThjMy44NTkgMCA3LTMuMTQgNy03cy0zLjE0MS03LTctNy03IDMuMTQtNyA3IDMuMTQxIDcgNyA3eiIvPjwvc3ZnPg==');*/
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 12px 12px;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		transition: all .35s;
+		z-index: 11;
+	}
+
+	
+
+	.gal-item img {
+		display: block;
+		transform: scale(1,1);
+		transition: all .3s;
+	}
+
+	.gal-item a:hover img {
+		transform: scale(1.2,1.2);
+	}
+
+	.gal-item:hover a:before {
+		opacity: 1;
+		background-size: 48px 48px;
+	}
+
+
+</style>
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<h1>Hover image</h1>
+
+		<p><a href="index.html">Index</a> | 
+			<a href="hover.html">Hover Image 1</a> | 
+			<a href="hover2.html">Hover Image 2</a></p>
+
+
+		<div class="gallery">
+			<div class="gal-item">
+				<a class="glightbox" title="My title here for a link" href="img/large/gm1.jpg">
+					<img src="img/small/gm1.jpg" alt="Image">
+				</a>
+			</div>
+
+			<div class="gal-item">
+				<a class="glightbox" title="My title here for a link" href="img/large/gm2.jpg">
+					<img src="img/small/gm2.jpg" alt="Image">
+				</a>
+			</div>
+
+			<div class="gal-item">
+				<a class="glightbox" title="My title here for a link" href="img/large/gm3.jpg">
+					<img src="img/small/gm3.jpg" alt="Image">
+				</a>
+			</div>
+
+			<div class="gal-item">
+				<a class="glightbox" title="My title here for a link" href="img/large/gm4.jpg">
+					<img src="img/small/gm4.jpg" alt="Image">
+				</a>
+			</div>
+
+		</div><!-- gallery -->
+	</div><!-- wrapper -->
+
+
+
+<script src="js/glightbox.js"></script>
+<!-- https://github.com/biati-digital/glightbox/blob/master/README.md -->
+<script>
+	var gallery1 = GLightbox({
+	    selector: '.glightbox',
+	    zoomable: false,
+	    // closeOnOutsideClick: true,
+	});
+
+</script>
+
+
+</body>
+</html>

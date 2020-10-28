@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lightbox</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" media="screen" href="style.css">
+<link rel="stylesheet" media="screen" href="glightbox.css">
+</head>
+<body>
+
+<div class="wrap">
+
+	<h1>Glightbox Gallery Index</h1>
+	<p><a href="index.html">Index</a> | 
+		<a href="hover.html">Hover Image 1</a> | 
+		<a href="hover2.html">Hover Image 2</a></p>
+
+
+	<div class="gallery-one">
+
+		<div class="img-box">
+			<a class="thumb glightbox" href="img/large/gm1.jpg" title="Haute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+				<img src="img/small/gm1.jpg" alt="Alt Desc" title="Link Title">
+			</a>
+		</div><!-- img-box -->
+
+		<div class="img-box">
+			<a class="thumb glightbox" href="img/large/gm2.jpg">
+				<img src="img/small/gm2.jpg" alt="Alt Desc" title="Link Title">
+			</a>
+		</div><!-- img-box -->
+
+		<div class="img-box">
+			<a class="thumb glightbox" href="img/large/gm3.jpg">
+				<img src="img/small/gm3.jpg" alt="Alt Desc" title="Link Title">
+			</a>
+		</div><!-- img-box -->
+
+		<div class="img-box">
+			<a class="thumb glightbox" href="img/large/gm4.jpg">
+				<img src="img/small/gm4.jpg" alt="Alt Desc" title="Link Title">
+			</a>
+		</div><!-- img-box -->
+		
+	</div><!-- gallery -->
+
+	<div class="gallery-one">
+
+		<div class="img-box">
+			<a class="thumb glightbox2" href="img/large/gm5.jpg">
+				<img src="img/small/gm5.jpg" alt="Alt Desc" title="Link Title">
+			</a>
+		</div><!-- img-box -->
+
+		<div class="img-box">
+			<a class="thumb glightbox2" href="img/large/gm6.jpg">
+				<img src="img/small/gm6.jpg" alt="Alt Desc" title="Link Title">
+			</a>
+		</div><!-- img-box -->
+
+		<div class="img-box">
+			<a class="thumb glightbox2" href="img/large/gm7.jpg">
+				<img src="img/small/gm7.jpg" alt="Alt Desc" title="Link Title">
+			</a>
+		</div><!-- img-box -->
+
+		<div class="img-box">
+			<a class="thumb glightbox2" href="img/large/gm8.jpg">
+				<img src="img/small/gm8.jpg" alt="Alt Desc" title="Link Title">
+			</a>
+		</div><!-- img-box -->
+
+	</div> <!-- gallery -->
+
+	<br>
+	<br>
+	<br>
+
+	<a class="lightbox" href="img/large/gm1.jpg">Open image lightbox</a>
+
+	<br>
+	<br>
+	<br>
+
+	<a class="lightbox-map" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.5594610548314!2d21.2957554080608!3d46.17942456292458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474599aaa867fdfb%3A0x382f042adabf63eb!2sMAXTHERM S.R.L.!5e0!3m2!1sro!2sro!4v1603782317084!5m2!1sro!2sro">Google Map</a>
+
+	<br>
+	<br>
+	<br>
+
+	<!-- One line config -->
+	<a class="lightbox" href="img/large/gm1.jpg" data-glightbox="title: Your title; description: description here. Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Sed, consectetur. Est minus tempora hic dolorem, similique reprehenderit molestiae saepe officia, illo rerum accusantium asperiores, itaque omnis expedita obcaecati, aperiam tenetur? ; descPosition: left; type: image; effect: fade; width: 900px; height: auto; zoomable: true; draggable: true;">Lightbox with inline config</a>
+
+	<br>
+	<br>
+
+	<!-- Multiple data attributes / You can use the options as separated data attributes -->
+	<a class="lightbox" href="img/large/gm2.jpg" data-title="My title" data-description="description here" data-desc-position="right" data-type="image" data-effect="fade" data-width="900px" data-height="auto" data-zoomable="true" data-draggable="true">Multiple data attributes</a>
+
+</div>
+
+<script src="js/glightbox.js"></script>
+<!-- https://github.com/biati-digital/glightbox/blob/master/README.md -->
+<script>
+	var gallery1 = GLightbox({
+	    selector: '.glightbox',
+	    zoomable: false,
+	    // closeOnOutsideClick: true,
+	});
+
+	var gallery2 = GLightbox({
+	    selector: '.glightbox2',
+	    zoomable: false,
+	});
+
+	var lightbox = GLightbox({
+	    selector: '.lightbox',
+	    zoomable: false,
+	});
+
+	var lightbox = GLightbox({
+	    selector: '.lightbox-map',
+	    width: '1200px',
+	    height: '600px',
+	    // zoomable: false,
+	});
+</script>
+
+
+</body>
+</html>
